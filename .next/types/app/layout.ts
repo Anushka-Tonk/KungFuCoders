@@ -1,4 +1,4 @@
-// File: C:\Users\asus\Desktop\myntra_app\src\app\layout.tsx
+// File: C:\Users\cynth\Dropbox\PC\Documents\Competitions\Hackathons\Myntra-WeForShe\KungFuCoders\src\app\layout.tsx
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
