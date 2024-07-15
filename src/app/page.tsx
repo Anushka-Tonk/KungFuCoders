@@ -69,6 +69,6 @@ export default function Home() {
       />
     );
 
+  // return <InitialScreen onSubmit={handleSubmit} />;
   return <LoadingScreen />;
-  <InitialScreen onSubmit={handleSubmit} />;
 }

@@ -16,18 +16,25 @@ export function LoadingScreen() {
         </div>
       </header>
       <main className="p-4">
-        <div className="flex items-center p-4 mb-4 bg-pink-200 rounded-md">
-          <SearchIcon className="w-6 h-6 mr-2" />
-          <span>Here is your search result...</span>
-        </div>
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-          {Array.from({ length: 8 }).map((_, index) => (
-            <div key={index} className="flex items-center justify-center p-4 bg-white border rounded-md">
-              <img src="/placeholder.svg" alt="T-shirt" className="w-full h-auto" />
-            </div>
-          ))}
-        </div>
-      </main>
+  <div className="flex items-center p-4 mb-4 bg-pink-200 rounded-md">
+    <SearchIcon className="w-6 h-6 mr-2" />
+    <span>Here is your search result...</span>
+  </div>
+  
+<div className="flex items-center justify-center">
+  <div className="p-4 bg-white rounded-md max-w-xs max-h-64">
+    <img src="/placeholder.svg" alt="T-shirt" className="w-full h-auto " />
+  </div>
+  <div className="mx-10">
+  </div>
+  <div className="p-4 bg-white  rounded-md max-w-xs max-h-64">
+    <span className="block mt-4">Loading...</span>
+  </div>
+</div>
+
+
+</main>
+
     </div>
   )
 }
@@ -53,7 +60,6 @@ function MenuIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   )
 }
 
-
 function SearchIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
@@ -73,7 +79,6 @@ function SearchIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
     </svg>
   )
 }
-
 
 function XIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
