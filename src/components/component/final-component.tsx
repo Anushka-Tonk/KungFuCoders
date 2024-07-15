@@ -10,9 +10,14 @@ type Props = {
   image:  GeneratedImage;
   userPrompt: string;
   reset: () => void;
+  onSubmit: () => void;
 };
 
-export function FinalComponent({ image, userPrompt, reset }: Props) {
+export function FinalComponent({ image, userPrompt, reset, onSubmit}: Props) {
+
+  const handleSubmit = () => {
+    onSubmit();
+  };
   return (
     <div className="flex flex-col min-h-screen p-4 md:flex-row md:p-10">
       <div className="flex items-center justify-between w-full md:hidden">
@@ -78,6 +83,7 @@ export function FinalComponent({ image, userPrompt, reset }: Props) {
         <Button
           variant="secondary"
           className="mt-4 flex items-center justify-center space-x-2 bg-pink-200 text-pink-700"
+          onClick={handleSubmit}
         >
           <CameraIcon className="w-6 h-6" />
           <span>Try our new AR feature...</span>
