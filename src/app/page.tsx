@@ -52,6 +52,17 @@ export default function Home() {
     setARGenerating(false);
   };
 
+  const runScript = async () => {
+    try {
+        const response = await fetch('http://localhost:5000/run-script');
+        const data = await response.text();
+        console.log(data);
+    } catch (error) {
+        console.error('Error running the script:', error);
+    }
+};
+
+
   const reset = () => {
     setUserPrompt("");
     setGeneratedImage(undefined);
@@ -66,9 +77,10 @@ export default function Home() {
         image={generatedImage!}
         userPrompt={userPrompt}
         reset={reset}
+        onSubmit={runScript}
       />
     );
 
-  // return <InitialScreen onSubmit={handleSubmit} />;
-  return <LoadingScreen />;
+  // return <LoadingScreen />;
+  return <InitialScreen onSubmit={handleSubmit} />;
 }
