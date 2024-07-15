@@ -3,6 +3,7 @@ import imutils
 import numpy as np
 import random
 import requests
+import sys
 
 def load_image_from_url(url):
     response = requests.get(url)
@@ -10,9 +11,9 @@ def load_image_from_url(url):
     img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
     return img
 
-def fashion():
+def fashion(image_url):
     video = cv2.VideoCapture(0)
-    image_url = "https://storage.googleapis.com/buildship-7sfpdw-us-central1/1721049608783.png"
+    # image_url = "https://storage.googleapis.com/buildship-7sfpdw-us-central1/1721049608783.png"
     thres = [130, 40, 75, 130]
     size = 180
     th = thres[0]
@@ -75,4 +76,5 @@ def fashion():
     cv2.destroyAllWindows()
 
 if __name__ == "__main__":
-    fashion()
+    image_url = sys.argv[1]  # Get the image URL from command line arguments
+    fashion(image_url)

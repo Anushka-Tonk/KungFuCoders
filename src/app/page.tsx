@@ -48,20 +48,16 @@ export default function Home() {
   const handleARSubmit = async () => {
     setARGenerating(true);
     console.log("AR opening");
-    
-    setARGenerating(false);
-  };
-
-  const runScript = async () => {
     try {
-        const response = await fetch('http://localhost:5000/run-script');
+        const response = await fetch(`http://localhost:5000/run-script?image_url=${encodeURIComponent(generatedImage?.generatedImage!)}`);
         const data = await response.text();
         console.log(data);
     } catch (error) {
         console.error('Error running the script:', error);
+    } finally{
+      setARGenerating(false);
     }
 };
-
 
   const reset = () => {
     setUserPrompt("");
@@ -77,7 +73,7 @@ export default function Home() {
         image={generatedImage!}
         userPrompt={userPrompt}
         reset={reset}
-        onSubmit={runScript}
+        onSubmit={handleARSubmit}
       />
     );
 
