@@ -21,26 +21,25 @@ export default function Home() {
     setUserPrompt(prompt);
     console.log(prompt);
     // Uncomment this when using API
-    // const response = await fetch(
-    //   "https://7sfpdw.buildship.run/get-prompt-cloth-image",
-    //   // process.env.NEXT_PUBLIC_GET_SCORE_WORKFLOW as string,
-    //   {
-    //     method: "POST",
-    //     body: JSON.stringify({
-    //       prompt: prompt
-    //     }),
-    //     headers: {
-    //       Accept: "application/json",
-    //       "Content-Type": "application/json",
-    //     },
-    //   }
-    // );
-    const data = {
-      "generatedImage": "https://storage.googleapis.com/buildship-7sfpdw-us-central1/1721044494821.png",
-      // "https://storage.googleapis.com/buildship-7sfpdw-us-central1/1721049608783.png"
-    };
-    console.log("new one");
-    // await response.json();
+    const response = await fetch(
+      "https://7sfpdw.buildship.run/get-prompt-cloth-image",
+      // process.env.NEXT_PUBLIC_GET_SCORE_WORKFLOW as string,
+      {
+        method: "POST",
+        body: JSON.stringify({
+          prompt: prompt
+        }),
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    // const data = {
+    //   "generatedImage": "https://storage.googleapis.com/buildship-7sfpdw-us-central1/1721044494821.png",
+    //   // "https://storage.googleapis.com/buildship-7sfpdw-us-central1/1721049608783.png"
+    // };s
+    const data = await response.json();
     setGeneratedImage(data);
     setGenerating(false);
   };
