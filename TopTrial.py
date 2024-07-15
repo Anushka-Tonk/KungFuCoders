@@ -27,11 +27,13 @@ def fashion():
         
         if circles is not None:
             circles = np.round(circles[0, :]).astype("int")
-            for (x, y, r) in circles:
-                if r > 30:
-                    cv2.circle(frame_to_try, (x, y), r, (0, 255, 0), 4)
-                    cv2.rectangle(frame_to_try, (x - 5, y - 5), (x + 5, y + 5), (0, 128, 255), -1)
-                    size = r * 7
+            # Filter the circles to find the one with the largest radius
+            largest_circle = max(circles, key=lambda c: c[2])
+            (x, y, r) = largest_circle
+            if r > 30:
+                cv2.circle(frame_to_try, (x, y), r, (0, 255, 0), 4)
+                cv2.rectangle(frame_to_try, (x - 5, y - 5), (x + 5, y + 5), (0, 128, 255), -1)
+                size = r * 7
         
         size = min(max(size, 100), 350)
         top_resized = imutils.resize(top, width=size)
