@@ -68,6 +68,9 @@ https://github.com/user-attachments/assets/c8c165a0-4897-4d06-b65c-c52d265303f8
 
 https://github.com/user-attachments/assets/b843f7e7-ad40-4282-9b17-7e5d3194d3af
 
+[Project Ideation.pptx](https://github.com/user-attachments/files/16396213/Kung.Fu.Coders.pptx)
+
+[Project Prototype Info.pptx](https://github.com/user-attachments/files/16396208/VITChennai_KungFuCoders.pptx)
 
 ## Learn More
 
