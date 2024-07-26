@@ -62,6 +62,13 @@ We employed TypeScript for robust type safety, ensuring stable and error-free co
 - **Next.js Routing:** Leveraging Next.js routing for seamless navigation between frontend pages and API routes.
 - **RESTful API Development:** Using Express.js to develop RESTful APIs, enabling efficient communication between frontend and backend.
 
+## Presentation & Demo Videos
+
+https://github.com/user-attachments/assets/c8c165a0-4897-4d06-b65c-c52d265303f8
+
+https://github.com/user-attachments/assets/b843f7e7-ad40-4282-9b17-7e5d3194d3af
+
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
