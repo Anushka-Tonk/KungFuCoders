@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import { AnotherFinal } from "@/components/component/another-final";
 // import { AnotherInitial } from "@/components/component/another-initial";
 // import { AnotherLoading } from "@/components/component/another-loading";
@@ -12,6 +13,14 @@
 import { AnotherAnotherInitial } from "@/components/component/another-another-initial";
 import { AnotherAnotherLoading } from "@/components/component/another-another-loading";
 import { FinalScreen } from "@/components/component/final-screen";
+=======
+"use client";
+
+import { FinalComponent } from "@/components/component/final-component";
+import { InitialScreen } from "@/components/component/initial-screen";
+import { LoadingScreen } from "@/components/component/loading-screen";
+import Image from "next/image";
+>>>>>>> upstream/main
 import { useState } from "react";
 
 export type GeneratedImage = {
@@ -43,6 +52,7 @@ export default function Home() {
         },
       }
     );
+<<<<<<< HEAD
     const data = {
       "generatedImage":// "https://storage.googleapis.com/buildship-7sfpdw-us-central1/1721044494821.png",
        "https://storage.googleapis.com/buildship-7sfpdw-us-central1/1721049608783.png",
@@ -50,6 +60,15 @@ export default function Home() {
     // const data = await response.json();
     setGeneratedImage(data);
      setGenerating(false);
+=======
+    // const data = {
+    //   "generatedImage": "https://storage.googleapis.com/buildship-7sfpdw-us-central1/1721044494821.png",
+    //   // "https://storage.googleapis.com/buildship-7sfpdw-us-central1/1721049608783.png"
+    // };s
+    const data = await response.json();
+    setGeneratedImage(data);
+    setGenerating(false);
+>>>>>>> upstream/main
   };
 
   const handleARSubmit = async () => {
@@ -72,6 +91,7 @@ export default function Home() {
   };
 
   if (generating)
+<<<<<<< HEAD
     return <AnotherAnotherLoading />;
 
   if (generatedImage)
@@ -91,3 +111,20 @@ export default function Home() {
 }
 
 
+=======
+    return <LoadingScreen />;
+
+  if (generatedImage)
+    return (
+      <FinalComponent
+        image={generatedImage!}
+        userPrompt={userPrompt}
+        reset={reset}
+        onSubmit={handleARSubmit}
+      />
+    );
+
+  // return <LoadingScreen />;
+  return <InitialScreen onSubmit={handleSubmit} />;
+}
+>>>>>>> upstream/main
