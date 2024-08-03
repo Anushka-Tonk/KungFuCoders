@@ -15,9 +15,10 @@ def fashion(image_url):
     video = cv2.VideoCapture(0)
     thres = [130, 40, 75, 130]
     th = thres[0]
-    size=100
+    size = 100
+
     while True:
-        top = load_image_from_url(image_url)  
+        top = load_image_from_url(image_url)
         (ret, frame_to_try) = video.read()
         frame_to_try = cv2.flip(frame_to_try, 1, 0)
         resized = imutils.resize(frame_to_try, width=800)
@@ -33,6 +34,7 @@ def fashion(image_url):
                 cv2.rectangle(frame_to_try, (x - 5, y - 5), (x + 5, y + 5), (0, 128, 255), -1)
                 size = r * 7
                 size = min(max(size, 100), 350)
+                print(f"Detected circle radius: {r}, computed size: {size}")
         
         top_resized = imutils.resize(top, width=size)
 
