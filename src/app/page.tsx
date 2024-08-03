@@ -1,9 +1,17 @@
+// import { AnotherFinal } from "@/components/component/another-final";
+// import { AnotherInitial } from "@/components/component/another-initial";
+// import { AnotherLoading } from "@/components/component/another-loading";
+// import { FinalComponent } from "@/components/component/final-component";
+// import { InitialScreen } from "@/components/component/initial-screen";
+// import { LoadingaScreen } from "@/components/component/loading-ankyt";
+// import { LoadingScreen } from "@/components/component/loading-screen";
+// import { NewInitial } from "@/components/component/new-initial";
+// import Image from "next/image";
 "use client";
 
-import { FinalComponent } from "@/components/component/final-component";
-import { InitialScreen } from "@/components/component/initial-screen";
-import { LoadingScreen } from "@/components/component/loading-screen";
-import Image from "next/image";
+import { AnotherAnotherInitial } from "@/components/component/another-another-initial";
+import { AnotherAnotherLoading } from "@/components/component/another-another-loading";
+import { FinalScreen } from "@/components/component/final-screen";
 import { useState } from "react";
 
 export type GeneratedImage = {
@@ -35,13 +43,13 @@ export default function Home() {
         },
       }
     );
-    // const data = {
-    //   "generatedImage": "https://storage.googleapis.com/buildship-7sfpdw-us-central1/1721044494821.png",
-    //   // "https://storage.googleapis.com/buildship-7sfpdw-us-central1/1721049608783.png"
-    // };s
-    const data = await response.json();
+    const data = {
+      "generatedImage":// "https://storage.googleapis.com/buildship-7sfpdw-us-central1/1721044494821.png",
+       "https://storage.googleapis.com/buildship-7sfpdw-us-central1/1721049608783.png",
+    };
+    // const data = await response.json();
     setGeneratedImage(data);
-    setGenerating(false);
+     setGenerating(false);
   };
 
   const handleARSubmit = async () => {
@@ -64,18 +72,22 @@ export default function Home() {
   };
 
   if (generating)
-    return <LoadingScreen />;
+    return <AnotherAnotherLoading />;
 
   if (generatedImage)
     return (
-      <FinalComponent
-        image={generatedImage!}
-        userPrompt={userPrompt}
-        reset={reset}
-        onSubmit={handleARSubmit}
+      <FinalScreen
+          image={generatedImage!}
+          userPrompt={userPrompt}
+          reset={reset}
+          onSubmit={handleARSubmit}
       />
     );
 
-  // return <LoadingScreen />;
-  return <InitialScreen onSubmit={handleSubmit} />;
+  return <
+    AnotherAnotherInitial onSubmit={handleSubmit}
+    />
+  ;
 }
+
+

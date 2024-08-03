@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-// File: C:\Users\asus\Desktop\myntra_app\src\app\page.tsx
-=======
-// File: D:\Try-On\KungFuCoders\src\app\page.tsx
->>>>>>> 006d80160dd8d0d9f7258ab488ee23d43dc73306
+// File: C:\Users\91620\Desktop\AR-TryOn\src\app\page.tsx
 import * as entry from '../../../src/app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
