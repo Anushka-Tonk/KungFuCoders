@@ -35,11 +35,11 @@ export default function Home() {
         },
       }
     );
-    // const data = {
-    //   "generatedImage": "https://storage.googleapis.com/buildship-7sfpdw-us-central1/1721044494821.png",
-    //   // "https://storage.googleapis.com/buildship-7sfpdw-us-central1/1721049608783.png"
-    // };s
-    const data = await response.json();
+    const data = {
+      "generatedImage": "https://storage.googleapis.com/buildship-7sfpdw-us-central1/1721044494821.png",
+      // "https://storage.googleapis.com/buildship-7sfpdw-us-central1/1721049608783.png"
+    };
+    // const data = await response.json();
     setGeneratedImage(data);
     setGenerating(false);
   };
