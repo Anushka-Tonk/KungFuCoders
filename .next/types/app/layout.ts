@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // File: C:\Users\asus\Desktop\myntra_app\src\app\layout.tsx
 =======
 // File: D:\Try-On\KungFuCoders\src\app\layout.tsx
 >>>>>>> 006d80160dd8d0d9f7258ab488ee23d43dc73306
+=======
+// File: D:\KungFuCoders-main\KungFuCoders-main\src\app\layout.tsx
+>>>>>>> sweetySingh-branch
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
